@@ -6,7 +6,7 @@ describe ("First Suite", () => {
         const colors = {
             "Light": "rgb(255, 255, 255)",
             "Dark": "rgb(34, 43, 69)",
-            "Cosmic": "rgb(50, 50, 89)",
+            "Cosmic": "rgb(50, 50, 89)", 
             "Corporate": "rgb(255, 255, 255)"
            };
 
@@ -14,6 +14,18 @@ describe ("First Suite", () => {
         cy.get("[data-name='chevron-down']").should("exist").click();
         cy.contains('Dark').click()
         cy.get("nb-layout-header nav").should("have.css", "background-color", colors["Dark"])
+
+        cy.get("[data-name='chevron-down']").should("exist").click();
+        cy.contains('Cosmic').click()
+        cy.get("nb-layout-header nav").should("have.css", "background-color", colors["Cosmic"])
+
+        cy.get("[data-name='chevron-down']").should("exist").click();
+        cy.contains('Corporate').click()
+        cy.get("nb-layout-header nav").should("have.css", "background-color", colors["Corporate"])
+
+        cy.get("[data-name='chevron-down']").should("exist").click();
+        cy.contains('Light').click()
+        cy.get("nb-layout-header nav").should("have.css", "background-color", colors["Light"])
         
         
         //(($element) => {
