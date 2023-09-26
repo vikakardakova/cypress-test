@@ -33,7 +33,9 @@ describe ("Register tests", () => {
 
      registerPage.elements.password().click().type('Vika123')
      registerPage.elements.repeatPassword().click().type('Vika13')
-     .should('have.css', 'border-color', 'rgb(255, 112, 141)')
+     cy.get("nb-card-body").click()
+     registerPage.elements.repeatPassword()
+     .should('have.css', 'border-color', 'rgb(255, 61, 113)')
 
      registerPage.elements.repeatPassword().clear()
      cy.get("nb-card-body").click()
