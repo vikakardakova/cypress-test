@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-04T10:31:23.106Z",
+    "end": "2023-10-04T10:31:26.242Z",
+    "duration": 3136,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "82d8875c-52ac-4de3-9148-e0ba109f510b",
+      "title": "",
+      "fullFile": "cypress/e2e/dateTests.spec.js",
+      "file": "cypress/e2e/dateTests.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e1262060-73d6-49bd-9235-5808393609fe",
+          "title": "Date tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check date",
+              "fullTitle": "Date tests Check date",
+              "timedOut": null,
+              "duration": 3077,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/pages\");\ncy.contains(\"Forms\").click();\n_datePickerPage.default.elements.datePickerMenu().click();\n_datePickerPage.default.elements.formPicker().click();\ncy.contains(\"Today\");\n_datePickerPage.default.elements.today().click;\n_datePickerPage.default.elements.formPicker().invoke(\"val\").then(input => {\n  const moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n  const inputDate = moment(input, \"MMM DD, YYYY\");\n  const today = moment();\n  expect(inputDate.isSame(today, \"day\")).to.be.true;\n});",
+              "err": {},
+              "uuid": "1f50978b-5251-4437-b5d7-7ad9b19e274f",
+              "parentUUID": "e1262060-73d6-49bd-9235-5808393609fe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1f50978b-5251-4437-b5d7-7ad9b19e274f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3077,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-04T10:31:59.315Z",
+    "end": "2023-10-04T10:32:08.262Z",
+    "duration": 8947,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6814b771-0c6d-4a04-8fc1-352e49b9ec0e",
+      "title": "",
+      "fullFile": "cypress/e2e/registerTests.spec.js",
+      "file": "cypress/e2e/registerTests.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7033f552-966a-418c-8ae8-1f35d63f04ce",
+          "title": "Register tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "SUCCESSFULL REGISTRATION",
+              "fullTitle": "Register tests SUCCESSFULL REGISTRATION",
+              "timedOut": null,
+              "duration": 6543,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"auth/register\");\n_registerPage.default.elements.fullName().click().type('Vika');\n_registerPage.default.elements.email().click().type('vika@gmail.com');\n_registerPage.default.elements.password().click().type('qwerty');\n_registerPage.default.elements.repeatPassword().click().type('qwerty');\n_registerPage.default.elements.agreeCheckbox().click();\n_registerPage.default.elements.registerButton().click();\ncy.wait(2000);\ncy.get(\"[class='user-picture image ng-star-inserted']\").should(\"exist\");",
+              "err": {},
+              "uuid": "2aa87f91-7e93-458f-a375-f94126f3f89f",
+              "parentUUID": "7033f552-966a-418c-8ae8-1f35d63f04ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validation REGISTRATION",
+              "fullTitle": "Register tests Validation REGISTRATION",
+              "timedOut": null,
+              "duration": 2298,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"auth/register\");\n_registerPage.default.elements.fullName().click().type('Vi');\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Full name should contains from 4 to 50 characters\");\n_registerPage.default.elements.email().click().type('Vi');\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Email should be the real one!\");\n_registerPage.default.elements.password().click().type('Vi');\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Password should contain from 4 to 50 characters\");\n_registerPage.default.elements.password().click().type('Vika123');\n_registerPage.default.elements.repeatPassword().click().type('Vika13');\ncy.get(\"nb-card-body\").click();\n_registerPage.default.elements.repeatPassword().should('have.css', 'border-color', 'rgb(255, 61, 113)');\n_registerPage.default.elements.repeatPassword().clear();\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Password confirmation is required!\");\n_registerPage.default.elements.registerButton().should('have.attr', 'disabled');",
+              "err": {},
+              "uuid": "41cb3e97-8971-4680-afe8-992c3f7f1c27",
+              "parentUUID": "7033f552-966a-418c-8ae8-1f35d63f04ce",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2aa87f91-7e93-458f-a375-f94126f3f89f",
+            "41cb3e97-8971-4680-afe8-992c3f7f1c27"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8841,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
