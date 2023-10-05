@@ -5,6 +5,9 @@
 
 # dependencies
 /node_modules
+/cypress/results
+mochawesome.json
+/mochawesome-report
 
 # IDEs and editors
 /.idea
