@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-04T19:14:30.276Z",
-    "end": "2023-10-04T19:14:39.525Z",
-    "duration": 9249,
+    "start": "2023-10-05T09:24:12.167Z",
+    "end": "2023-10-05T09:24:21.114Z",
+    "duration": 8947,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "56ac5c72-39dc-4c79-bfb3-96c136e17cd2",
+      "uuid": "7f8116e4-66d2-480e-9487-5dfad6c872e0",
       "title": "",
       "fullFile": "cypress/e2e/registerTests.spec.js",
       "file": "cypress/e2e/registerTests.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "255fbf3f-c050-4de7-90bb-140a0731f3ae",
+          "uuid": "197514df-96b2-45dc-8673-19c113b5ccb4",
           "title": "Register tests",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "SUCCESSFULL REGISTRATION",
               "fullTitle": "Register tests SUCCESSFULL REGISTRATION",
               "timedOut": null,
-              "duration": 6593,
+              "duration": 6354,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(\"auth/register\");\n_registerPage.default.elements.fullName().click().type('Vika');\n_registerPage.default.elements.email().click().type('vika@gmail.com');\n_registerPage.default.elements.password().click().type('qwerty');\n_registerPage.default.elements.repeatPassword().click().type('qwerty');\n_registerPage.default.elements.agreeCheckbox().click();\n_registerPage.default.elements.registerButton().click();\ncy.wait(2000);\ncy.get(\"[class='user-picture image ng-star-inserted']\").should(\"exist\");",
               "err": {},
-              "uuid": "e47b125e-9435-4f66-b044-6dc18e0a639c",
-              "parentUUID": "255fbf3f-c050-4de7-90bb-140a0731f3ae",
+              "uuid": "ae7ca2f1-3166-4182-a12b-29b6c2cab949",
+              "parentUUID": "197514df-96b2-45dc-8673-19c113b5ccb4",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Validation REGISTRATION",
               "fullTitle": "Register tests Validation REGISTRATION",
               "timedOut": null,
-              "duration": 2479,
+              "duration": 2434,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.visit(\"auth/register\");\n_registerPage.default.elements.fullName().click().type('Vi');\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Full name should contains from 4 to 50 characters\");\n_registerPage.default.elements.email().click().type('Vi');\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Email should be the real one!\");\n_registerPage.default.elements.password().click().type('Vi');\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Password should contain from 4 to 50 characters\");\n_registerPage.default.elements.password().click().type('Vika123');\n_registerPage.default.elements.repeatPassword().click().type('Vika13');\ncy.get(\"nb-card-body\").click();\n_registerPage.default.elements.repeatPassword().should('have.css', 'border-color', 'rgb(255, 61, 113)');\n_registerPage.default.elements.repeatPassword().clear();\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Password confirmation is required!\");\n_registerPage.default.elements.registerButton().should('have.attr', 'disabled');",
               "err": {},
-              "uuid": "ce7568f4-9ea5-4f81-be00-e72f33e68aff",
-              "parentUUID": "255fbf3f-c050-4de7-90bb-140a0731f3ae",
+              "uuid": "f0437ead-4ad8-4262-991c-a514f4e2ce94",
+              "parentUUID": "197514df-96b2-45dc-8673-19c113b5ccb4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e47b125e-9435-4f66-b044-6dc18e0a639c",
-            "ce7568f4-9ea5-4f81-be00-e72f33e68aff"
+            "ae7ca2f1-3166-4182-a12b-29b6c2cab949",
+            "f0437ead-4ad8-4262-991c-a514f4e2ce94"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9072,
+          "duration": 8788,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
