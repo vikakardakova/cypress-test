@@ -8,6 +8,7 @@
 /cypress/results
 mochawesome.json
 /mochawesome-report
+/cypress/screenshots
 
 # IDEs and editors
 /.idea
