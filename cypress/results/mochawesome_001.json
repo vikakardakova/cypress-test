@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-05T18:03:42.357Z",
-    "end": "2023-10-05T18:03:52.342Z",
-    "duration": 9985,
+    "start": "2023-10-05T19:39:50.121Z",
+    "end": "2023-10-05T19:39:58.984Z",
+    "duration": 8863,
     "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e9dd8618-105a-438b-a814-38ce3ea13135",
+      "uuid": "e360151d-6782-4791-a670-f9cb50e4ebd9",
       "title": "",
       "fullFile": "cypress/e2e/first.spec.js",
       "file": "cypress/e2e/first.spec.js",
@@ -29,7 +29,7 @@
           "title": "second task",
           "fullTitle": "second task",
           "timedOut": null,
-          "duration": 2823,
+          "duration": 2544,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -38,8 +38,8 @@
           "context": null,
           "code": "cy.visit(\"/pages\");\n// cy.get(\"[title='Layout']\").click()\ncy.get('.menu-title').contains('Layout').click();\ncy.contains('Accordion').click();\ncy.contains('A nebula is an interstellar cloud of dust, hydrogen').should('be.hidden');\ncy.contains('Toggle First Item').click({\n  force: true\n});\ncy.contains('A nebula is an interstellar cloud of dust, hydrogen').should('be.visible');",
           "err": {},
-          "uuid": "bf377cb8-8a4b-4b4b-933e-8c81ad183eca",
-          "parentUUID": "e9dd8618-105a-438b-a814-38ce3ea13135",
+          "uuid": "3e587933-1f42-44ad-9c88-b9c19e519db6",
+          "parentUUID": "e360151d-6782-4791-a670-f9cb50e4ebd9",
           "isHook": false,
           "skipped": false
         },
@@ -47,7 +47,7 @@
           "title": "third task",
           "fullTitle": "third task",
           "timedOut": null,
-          "duration": 2022,
+          "duration": 1950,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -56,8 +56,8 @@
           "context": null,
           "code": "cy.visit(\"/pages\");\ncy.get(\"[title = 'Modal & Overlays']\").click();\ncy.contains('Popover').click();\ncy.contains('Right').trigger('mouseenter');\ncy.get('[nbpopover]').should('be.visible', {\n  timeout: 10000\n});\ncy.get('[nbpopover]').should('have.attr', 'nbpopover', 'Hello, how are you today?');",
           "err": {},
-          "uuid": "e39b5f79-9447-4bed-ba89-00f5b79b5825",
-          "parentUUID": "e9dd8618-105a-438b-a814-38ce3ea13135",
+          "uuid": "33b90284-4384-4b18-8a84-942233ae58e5",
+          "parentUUID": "e360151d-6782-4791-a670-f9cb50e4ebd9",
           "isHook": false,
           "skipped": false
         },
@@ -65,7 +65,7 @@
           "title": "fourth task",
           "fullTitle": "fourth task",
           "timedOut": null,
-          "duration": 1778,
+          "duration": 1636,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -74,15 +74,15 @@
           "context": null,
           "code": "cy.visit(\"/pages/modal-overlays/dialog\");\ncy.contains('Enter Name').click();\ncy.get(\"[placeholder='Name']\").type('Vika');\ncy.contains('Submit').click();\n// cy.contains('Enter Name').click()\n// cy.get(\"[placeholder='Name']\").type('Alex')\n// cy.contains('Submit').click()\n// cy.contains('Enter Name').click()\n// cy.get(\"[placeholder='Name']\").type('Ann')\n//cy.contains('Submit').click()\ncy.get('h3:contains(\"Names\")').next('ul').find('li:contains(\"Vika\")').should('exist');",
           "err": {},
-          "uuid": "9918caff-d430-42e8-b59f-38c33a40e8af",
-          "parentUUID": "e9dd8618-105a-438b-a814-38ce3ea13135",
+          "uuid": "2d7a9792-e76c-46d2-8163-7907cd60564b",
+          "parentUUID": "e360151d-6782-4791-a670-f9cb50e4ebd9",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [
         {
-          "uuid": "b67a8622-26eb-4694-98b7-0f6f70bd9d56",
+          "uuid": "d7e7db14-d3bb-409e-bdf9-fdaccfdfda41",
           "title": "First Suite",
           "fullFile": "",
           "file": "",
@@ -93,7 +93,7 @@
               "title": "first task",
               "fullTitle": "First Suite first task",
               "timedOut": null,
-              "duration": 3177,
+              "duration": 2551,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -102,34 +102,34 @@
               "context": null,
               "code": "const colors = {\n  \"Light\": \"rgb(255, 255, 255)\",\n  \"Dark\": \"rgb(34, 43, 69)\",\n  \"Cosmic\": \"rgb(50, 50, 89)\",\n  \"Corporate\": \"rgb(255, 255, 255)\"\n};\ncy.visit(\"/pages\");\ncy.get(\"[data-name='chevron-down']\").should(\"exist\").click();\ncy.contains('Dark').click();\ncy.get(\"nb-layout-header nav\").should(\"have.css\", \"background-color\", colors[\"Dark\"]);\ncy.get(\"[data-name='chevron-down']\").should(\"exist\").click();\ncy.contains('Cosmic').click();\ncy.get(\"nb-layout-header nav\").should(\"have.css\", \"background-color\", colors[\"Cosmic\"]);\ncy.get(\"[data-name='chevron-down']\").should(\"exist\").click();\ncy.contains('Corporate').click();\ncy.get(\"nb-layout-header nav\").should(\"have.css\", \"background-color\", colors[\"Corporate\"]);\ncy.get(\"[data-name='chevron-down']\").should(\"exist\").click();\ncy.contains('Light').click();\ncy.get(\"nb-layout-header nav\").should(\"have.css\", \"background-color\", colors[\"Light\"]);\n//(($element) => {\n// const backgroundColor = window.getComputedStyle($element[0]).backgroundColor;\n// expect(backgroundColor).to.equal(colors[\"Dark\"]);",
               "err": {},
-              "uuid": "3ab978c8-4e66-4d55-a2ac-17eb453f7b82",
-              "parentUUID": "b67a8622-26eb-4694-98b7-0f6f70bd9d56",
+              "uuid": "b2445677-5843-44bf-8065-320ee64dad0e",
+              "parentUUID": "d7e7db14-d3bb-409e-bdf9-fdaccfdfda41",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3ab978c8-4e66-4d55-a2ac-17eb453f7b82"
+            "b2445677-5843-44bf-8065-320ee64dad0e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3177,
+          "duration": 2551,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         }
       ],
       "passes": [
-        "bf377cb8-8a4b-4b4b-933e-8c81ad183eca",
-        "e39b5f79-9447-4bed-ba89-00f5b79b5825",
-        "9918caff-d430-42e8-b59f-38c33a40e8af"
+        "3e587933-1f42-44ad-9c88-b9c19e519db6",
+        "33b90284-4384-4b18-8a84-942233ae58e5",
+        "2d7a9792-e76c-46d2-8163-7907cd60564b"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 6623,
+      "duration": 6130,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000
