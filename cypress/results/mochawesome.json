@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-04T10:31:23.106Z",
-    "end": "2023-10-04T10:31:26.242Z",
-    "duration": 3136,
+    "start": "2023-10-04T19:13:52.532Z",
+    "end": "2023-10-04T19:13:55.600Z",
+    "duration": 3068,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "82d8875c-52ac-4de3-9148-e0ba109f510b",
+      "uuid": "012b00f1-eed3-4a19-965f-7f047004e542",
       "title": "",
       "fullFile": "cypress/e2e/dateTests.spec.js",
       "file": "cypress/e2e/dateTests.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e1262060-73d6-49bd-9235-5808393609fe",
+          "uuid": "c7e441a0-22a2-49f3-b5a8-da8fabc1a922",
           "title": "Date tests",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Check date",
               "fullTitle": "Date tests Check date",
               "timedOut": null,
-              "duration": 3077,
+              "duration": 2996,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(\"/pages\");\ncy.contains(\"Forms\").click();\n_datePickerPage.default.elements.datePickerMenu().click();\n_datePickerPage.default.elements.formPicker().click();\ncy.contains(\"Today\");\n_datePickerPage.default.elements.today().click;\n_datePickerPage.default.elements.formPicker().invoke(\"val\").then(input => {\n  const moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n  const inputDate = moment(input, \"MMM DD, YYYY\");\n  const today = moment();\n  expect(inputDate.isSame(today, \"day\")).to.be.true;\n});",
               "err": {},
-              "uuid": "1f50978b-5251-4437-b5d7-7ad9b19e274f",
-              "parentUUID": "e1262060-73d6-49bd-9235-5808393609fe",
+              "uuid": "8eb3422a-5c5a-49c4-a9aa-1a79272c26f5",
+              "parentUUID": "c7e441a0-22a2-49f3-b5a8-da8fabc1a922",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1f50978b-5251-4437-b5d7-7ad9b19e274f"
+            "8eb3422a-5c5a-49c4-a9aa-1a79272c26f5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3077,
+          "duration": 2996,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2023-10-04T10:31:23.106Z",
-    "end": "2023-10-04T10:32:08.262Z",
-    "duration": 45156
+    "start": "2023-10-04T19:13:52.532Z",
+    "end": "2023-10-04T19:14:39.525Z",
+    "duration": 46993
   },
   "results": [
     {
-      "uuid": "084bf0a6-2125-483b-aee9-e48078c615b0",
+      "uuid": "b22d3632-fddf-4e16-b56d-14a58c6d4ed7",
       "title": "",
       "fullFile": "cypress/e2e/first.spec.js",
       "file": "cypress/e2e/first.spec.js",
@@ -29,7 +29,7 @@
           "title": "second task",
           "fullTitle": "second task",
           "timedOut": null,
-          "duration": 2698,
+          "duration": 2734,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -38,8 +38,8 @@
           "context": null,
           "code": "cy.visit(\"/pages\");\n// cy.get(\"[title='Layout']\").click()\ncy.get('.menu-title').contains('Layout').click();\ncy.contains('Accordion').click();\ncy.contains('A nebula is an interstellar cloud of dust, hydrogen').should('be.hidden');\ncy.contains('Toggle First Item').click({\n  force: true\n});\ncy.contains('A nebula is an interstellar cloud of dust, hydrogen').should('be.visible');",
           "err": {},
-          "uuid": "4ca554aa-7f0a-45ea-a532-08f81fdf47bb",
-          "parentUUID": "084bf0a6-2125-483b-aee9-e48078c615b0",
+          "uuid": "f12b8c28-41e1-49bf-aa23-ad7bd802caec",
+          "parentUUID": "b22d3632-fddf-4e16-b56d-14a58c6d4ed7",
           "isHook": false,
           "skipped": false
         },
@@ -47,7 +47,7 @@
           "title": "third task",
           "fullTitle": "third task",
           "timedOut": null,
-          "duration": 1947,
+          "duration": 2192,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -56,8 +56,8 @@
           "context": null,
           "code": "cy.visit(\"/pages\");\ncy.get(\"[title = 'Modal & Overlays']\").click();\ncy.contains('Popover').click();\ncy.contains('Right').trigger('mouseenter');\ncy.get('[nbpopover]').should('be.visible', {\n  timeout: 10000\n});\ncy.get('[nbpopover]').should('have.attr', 'nbpopover', 'Hello, how are you today?');",
           "err": {},
-          "uuid": "51761ac5-76ca-4dfa-bdc1-cfc35199597b",
-          "parentUUID": "084bf0a6-2125-483b-aee9-e48078c615b0",
+          "uuid": "59f521d6-6db2-442a-9b3f-2796bb86b4e1",
+          "parentUUID": "b22d3632-fddf-4e16-b56d-14a58c6d4ed7",
           "isHook": false,
           "skipped": false
         },
@@ -65,7 +65,7 @@
           "title": "fourth task",
           "fullTitle": "fourth task",
           "timedOut": null,
-          "duration": 1668,
+          "duration": 1959,
           "state": "passed",
           "speed": "fast",
           "pass": true,
@@ -74,15 +74,15 @@
           "context": null,
           "code": "cy.visit(\"/pages/modal-overlays/dialog\");\ncy.contains('Enter Name').click();\ncy.get(\"[placeholder='Name']\").type('Vika');\ncy.contains('Submit').click();\n// cy.contains('Enter Name').click()\n// cy.get(\"[placeholder='Name']\").type('Alex')\n// cy.contains('Submit').click()\n// cy.contains('Enter Name').click()\n// cy.get(\"[placeholder='Name']\").type('Ann')\n//cy.contains('Submit').click()\ncy.get('h3:contains(\"Names\")').next('ul').find('li:contains(\"Vika\")').should('exist');",
           "err": {},
-          "uuid": "30efa2eb-7814-4d06-b180-88225d66128c",
-          "parentUUID": "084bf0a6-2125-483b-aee9-e48078c615b0",
+          "uuid": "98bb2fbe-280d-44cb-a5e6-ac0c551abe7b",
+          "parentUUID": "b22d3632-fddf-4e16-b56d-14a58c6d4ed7",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [
         {
-          "uuid": "eafa0a16-dfb0-4f75-88a2-10edbf502a41",
+          "uuid": "b40e95fb-7733-4442-bfa6-831f273dce87",
           "title": "First Suite",
           "fullFile": "",
           "file": "",
@@ -93,7 +93,7 @@
               "title": "first task",
               "fullTitle": "First Suite first task",
               "timedOut": null,
-              "duration": 2533,
+              "duration": 2836,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -102,40 +102,40 @@
               "context": null,
               "code": "const colors = {\n  \"Light\": \"rgb(255, 255, 255)\",\n  \"Dark\": \"rgb(34, 43, 69)\",\n  \"Cosmic\": \"rgb(50, 50, 89)\",\n  \"Corporate\": \"rgb(255, 255, 255)\"\n};\ncy.visit(\"/pages\");\ncy.get(\"[data-name='chevron-down']\").should(\"exist\").click();\ncy.contains('Dark').click();\ncy.get(\"nb-layout-header nav\").should(\"have.css\", \"background-color\", colors[\"Dark\"]);\ncy.get(\"[data-name='chevron-down']\").should(\"exist\").click();\ncy.contains('Cosmic').click();\ncy.get(\"nb-layout-header nav\").should(\"have.css\", \"background-color\", colors[\"Cosmic\"]);\ncy.get(\"[data-name='chevron-down']\").should(\"exist\").click();\ncy.contains('Corporate').click();\ncy.get(\"nb-layout-header nav\").should(\"have.css\", \"background-color\", colors[\"Corporate\"]);\ncy.get(\"[data-name='chevron-down']\").should(\"exist\").click();\ncy.contains('Light').click();\ncy.get(\"nb-layout-header nav\").should(\"have.css\", \"background-color\", colors[\"Light\"]);\n//(($element) => {\n// const backgroundColor = window.getComputedStyle($element[0]).backgroundColor;\n// expect(backgroundColor).to.equal(colors[\"Dark\"]);",
               "err": {},
-              "uuid": "963c1817-1e17-4cc6-a601-724064aceb77",
-              "parentUUID": "eafa0a16-dfb0-4f75-88a2-10edbf502a41",
+              "uuid": "a088e6f8-e80e-43cb-b4a7-b0f9af7cf3f4",
+              "parentUUID": "b40e95fb-7733-4442-bfa6-831f273dce87",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "963c1817-1e17-4cc6-a601-724064aceb77"
+            "a088e6f8-e80e-43cb-b4a7-b0f9af7cf3f4"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2533,
+          "duration": 2836,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         }
       ],
       "passes": [
-        "4ca554aa-7f0a-45ea-a532-08f81fdf47bb",
-        "51761ac5-76ca-4dfa-bdc1-cfc35199597b",
-        "30efa2eb-7814-4d06-b180-88225d66128c"
+        "f12b8c28-41e1-49bf-aa23-ad7bd802caec",
+        "59f521d6-6db2-442a-9b3f-2796bb86b4e1",
+        "98bb2fbe-280d-44cb-a5e6-ac0c551abe7b"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 6313,
+      "duration": 6885,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000
     },
     {
-      "uuid": "51aae7b8-5b79-4c20-a2b7-394f5f112954",
+      "uuid": "499efcc3-97fa-4bd2-bf47-8ca5f54fe8e1",
       "title": "",
       "fullFile": "cypress/e2e/loginPageTests.spec.js",
       "file": "cypress/e2e/loginPageTests.spec.js",
@@ -144,7 +144,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dbadd67f-4139-4751-b658-5c1b1533cb0d",
+          "uuid": "f1c844c8-4625-4b97-8fe5-efd370d86ac7",
           "title": "Login tests",
           "fullFile": "",
           "file": "",
@@ -155,7 +155,7 @@
               "title": "first task-VALIDATION EMAIL",
               "fullTitle": "Login tests first task-VALIDATION EMAIL",
               "timedOut": null,
-              "duration": 3487,
+              "duration": 3412,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -164,8 +164,8 @@
               "context": null,
               "code": "cy.visit(\"/\");\ncy.contains(\"Auth\").click();\ncy.contains(\"Login\").click();\n_loginPage.default.elements.emailInput().click();\n_loginPage.default.elements.passwordInput().type(\"secretpass\");\ncy.get(\"nb-card-body\").click();\ncy.contains('Email is required!');\n_loginPage.default.elements.emailInput().type('new');\n_loginPage.default.elements.passwordInput().type(\"secretpass\");\ncy.get(\"nb-card-body\").click();\ncy.contains('Email should be the real one!');",
               "err": {},
-              "uuid": "a0af178a-bccf-4b1b-8705-42a571769b29",
-              "parentUUID": "dbadd67f-4139-4751-b658-5c1b1533cb0d",
+              "uuid": "43b58934-76a1-416d-a9c1-4e3add6c6a03",
+              "parentUUID": "f1c844c8-4625-4b97-8fe5-efd370d86ac7",
               "isHook": false,
               "skipped": false
             },
@@ -173,7 +173,7 @@
               "title": "first task-VALIDATION Password",
               "fullTitle": "Login tests first task-VALIDATION Password",
               "timedOut": null,
-              "duration": 5950,
+              "duration": 6258,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -182,8 +182,8 @@
               "context": null,
               "code": "cy.visit(\"/\");\ncy.contains(\"Auth\").click();\ncy.contains(\"Login\").click();\n_loginPage.default.elements.passwordInput().type(\"no\");\ncy.get(\"nb-card-body\").click();\ncy.contains(\"Password should contain from 4 to 50 characters\");\n_loginPage.default.elements.passwordInput().clear();\n_loginPage.default.elements.emailInput().type(\"vika@gmail.com\");\ncy.contains(\"Login\").click();\ncy.contains(\"Password is required\");\n_loginPage.default.elements.passwordInput().type(\"verylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpassverylongpass\");\ncy.contains(\"Login\").click();\n_loginPage.default.elements.passwordInput().invoke(\"prop\", \"value\").should(\"have.length\", 50);",
               "err": {},
-              "uuid": "eb2cf5e4-f92c-4da8-9d62-8b9a57fcca46",
-              "parentUUID": "dbadd67f-4139-4751-b658-5c1b1533cb0d",
+              "uuid": "6993f467-1b35-4474-8fb5-84f5c7f1f1a4",
+              "parentUUID": "f1c844c8-4625-4b97-8fe5-efd370d86ac7",
               "isHook": false,
               "skipped": false
             },
@@ -191,7 +191,7 @@
               "title": "Second task - SUCCESSFULL LOGIN",
               "fullTitle": "Login tests Second task - SUCCESSFULL LOGIN",
               "timedOut": null,
-              "duration": 5777,
+              "duration": 5982,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -200,8 +200,8 @@
               "context": null,
               "code": "cy.visit(\"/\");\ncy.contains(\"Auth\").click();\ncy.contains(\"Login\").click();\n_loginPage.default.elements.emailInput().type(\"vika@gmail.com\");\n_loginPage.default.elements.passwordInput().type(\"secretpass\");\n_loginPage.default.elements.loginButton();\ncy.wait(2000);\ncy.get(\"[class='user-picture image ng-star-inserted']\").should(\"exist\");",
               "err": {},
-              "uuid": "2e7916b5-5b71-4326-9ce5-454d9d38e5b3",
-              "parentUUID": "dbadd67f-4139-4751-b658-5c1b1533cb0d",
+              "uuid": "61b9993d-18ab-4119-9780-2004c5effd55",
+              "parentUUID": "f1c844c8-4625-4b97-8fe5-efd370d86ac7",
               "isHook": false,
               "skipped": false
             },
@@ -209,7 +209,7 @@
               "title": "'Forgot password' validation",
               "fullTitle": "Login tests 'Forgot password' validation",
               "timedOut": null,
-              "duration": 2664,
+              "duration": 2782,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -218,23 +218,23 @@
               "context": null,
               "code": "cy.visit(\"/\");\ncy.contains(\"Auth\").click();\ncy.contains(\"Login\").click();\n_loginPage.default.elements.forgotPass().click();\n_loginPage.default.elements.emailInput().click();\ncy.contains(\"Forgot Password\").click();\ncy.get('.caption').should('have.text', ' Email is required! ');\n_loginPage.default.elements.emailInput().type('new');\ncy.contains(\"Forgot Password\").click();\ncy.get('.caption').should('have.text', ' Email should be the real one! ');",
               "err": {},
-              "uuid": "366df826-5764-45f4-bd90-205d343ced55",
-              "parentUUID": "dbadd67f-4139-4751-b658-5c1b1533cb0d",
+              "uuid": "a8921ab8-fa67-47bd-8b08-a94ed87e4b5d",
+              "parentUUID": "f1c844c8-4625-4b97-8fe5-efd370d86ac7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a0af178a-bccf-4b1b-8705-42a571769b29",
-            "eb2cf5e4-f92c-4da8-9d62-8b9a57fcca46",
-            "2e7916b5-5b71-4326-9ce5-454d9d38e5b3",
-            "366df826-5764-45f4-bd90-205d343ced55"
+            "43b58934-76a1-416d-a9c1-4e3add6c6a03",
+            "6993f467-1b35-4474-8fb5-84f5c7f1f1a4",
+            "61b9993d-18ab-4119-9780-2004c5effd55",
+            "a8921ab8-fa67-47bd-8b08-a94ed87e4b5d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 17878,
+          "duration": 18434,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -250,7 +250,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "6814b771-0c6d-4a04-8fc1-352e49b9ec0e",
+      "uuid": "56ac5c72-39dc-4c79-bfb3-96c136e17cd2",
       "title": "",
       "fullFile": "cypress/e2e/registerTests.spec.js",
       "file": "cypress/e2e/registerTests.spec.js",
@@ -259,7 +259,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7033f552-966a-418c-8ae8-1f35d63f04ce",
+          "uuid": "255fbf3f-c050-4de7-90bb-140a0731f3ae",
           "title": "Register tests",
           "fullFile": "",
           "file": "",
@@ -270,7 +270,7 @@
               "title": "SUCCESSFULL REGISTRATION",
               "fullTitle": "Register tests SUCCESSFULL REGISTRATION",
               "timedOut": null,
-              "duration": 6543,
+              "duration": 6593,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -279,8 +279,8 @@
               "context": null,
               "code": "cy.visit(\"auth/register\");\n_registerPage.default.elements.fullName().click().type('Vika');\n_registerPage.default.elements.email().click().type('vika@gmail.com');\n_registerPage.default.elements.password().click().type('qwerty');\n_registerPage.default.elements.repeatPassword().click().type('qwerty');\n_registerPage.default.elements.agreeCheckbox().click();\n_registerPage.default.elements.registerButton().click();\ncy.wait(2000);\ncy.get(\"[class='user-picture image ng-star-inserted']\").should(\"exist\");",
               "err": {},
-              "uuid": "2aa87f91-7e93-458f-a375-f94126f3f89f",
-              "parentUUID": "7033f552-966a-418c-8ae8-1f35d63f04ce",
+              "uuid": "e47b125e-9435-4f66-b044-6dc18e0a639c",
+              "parentUUID": "255fbf3f-c050-4de7-90bb-140a0731f3ae",
               "isHook": false,
               "skipped": false
             },
@@ -288,7 +288,7 @@
               "title": "Validation REGISTRATION",
               "fullTitle": "Register tests Validation REGISTRATION",
               "timedOut": null,
-              "duration": 2298,
+              "duration": 2479,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -297,21 +297,21 @@
               "context": null,
               "code": "cy.visit(\"auth/register\");\n_registerPage.default.elements.fullName().click().type('Vi');\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Full name should contains from 4 to 50 characters\");\n_registerPage.default.elements.email().click().type('Vi');\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Email should be the real one!\");\n_registerPage.default.elements.password().click().type('Vi');\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Password should contain from 4 to 50 characters\");\n_registerPage.default.elements.password().click().type('Vika123');\n_registerPage.default.elements.repeatPassword().click().type('Vika13');\ncy.get(\"nb-card-body\").click();\n_registerPage.default.elements.repeatPassword().should('have.css', 'border-color', 'rgb(255, 61, 113)');\n_registerPage.default.elements.repeatPassword().clear();\ncy.get(\"nb-card-body\").click().should(\"contain\", \"Password confirmation is required!\");\n_registerPage.default.elements.registerButton().should('have.attr', 'disabled');",
               "err": {},
-              "uuid": "41cb3e97-8971-4680-afe8-992c3f7f1c27",
-              "parentUUID": "7033f552-966a-418c-8ae8-1f35d63f04ce",
+              "uuid": "ce7568f4-9ea5-4f81-be00-e72f33e68aff",
+              "parentUUID": "255fbf3f-c050-4de7-90bb-140a0731f3ae",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2aa87f91-7e93-458f-a375-f94126f3f89f",
-            "41cb3e97-8971-4680-afe8-992c3f7f1c27"
+            "e47b125e-9435-4f66-b044-6dc18e0a639c",
+            "ce7568f4-9ea5-4f81-be00-e72f33e68aff"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8841,
+          "duration": 9072,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -327,7 +327,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "82d8875c-52ac-4de3-9148-e0ba109f510b",
+      "uuid": "012b00f1-eed3-4a19-965f-7f047004e542",
       "title": "",
       "fullFile": "cypress/e2e/dateTests.spec.js",
       "file": "cypress/e2e/dateTests.spec.js",
@@ -336,7 +336,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e1262060-73d6-49bd-9235-5808393609fe",
+          "uuid": "c7e441a0-22a2-49f3-b5a8-da8fabc1a922",
           "title": "Date tests",
           "fullFile": "",
           "file": "",
@@ -347,7 +347,7 @@
               "title": "Check date",
               "fullTitle": "Date tests Check date",
               "timedOut": null,
-              "duration": 3077,
+              "duration": 2996,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -356,20 +356,20 @@
               "context": null,
               "code": "cy.visit(\"/pages\");\ncy.contains(\"Forms\").click();\n_datePickerPage.default.elements.datePickerMenu().click();\n_datePickerPage.default.elements.formPicker().click();\ncy.contains(\"Today\");\n_datePickerPage.default.elements.today().click;\n_datePickerPage.default.elements.formPicker().invoke(\"val\").then(input => {\n  const moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n  const inputDate = moment(input, \"MMM DD, YYYY\");\n  const today = moment();\n  expect(inputDate.isSame(today, \"day\")).to.be.true;\n});",
               "err": {},
-              "uuid": "1f50978b-5251-4437-b5d7-7ad9b19e274f",
-              "parentUUID": "e1262060-73d6-49bd-9235-5808393609fe",
+              "uuid": "8eb3422a-5c5a-49c4-a9aa-1a79272c26f5",
+              "parentUUID": "c7e441a0-22a2-49f3-b5a8-da8fabc1a922",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1f50978b-5251-4437-b5d7-7ad9b19e274f"
+            "8eb3422a-5c5a-49c4-a9aa-1a79272c26f5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3077,
+          "duration": 2996,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
