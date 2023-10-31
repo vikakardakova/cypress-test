@@ -3,7 +3,7 @@ const { configurePlugin } = require("cypress-mongodb");
 
 module.exports = defineConfig({
   retries: 1,
-  projectId: "d15px9", //for cypressCloud
+  //projectId: "d15px9", //for cypressCloud
   reporter: "mochawesome",
   reporterOptions: {
     reportDir: "cypress/results",
