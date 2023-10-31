@@ -10,7 +10,7 @@ jobs:
             - name: Install dependencies
               run: npm install --force
             - name: Run tests
-              run: npm run cy-safe
+              run: npm run cypress:app
             - name: Save reports
               uses: actions/upload-artifact@v3
             - name: Get reports
