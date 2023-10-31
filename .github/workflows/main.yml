@@ -11,4 +11,8 @@ jobs:
               run: npm install --force
             - name: Run tests
               run: npm run cy-safe
-
+            - name: Save reports
+              uses: actions/upload-artifact@v3
+            - name: Get reports
+              uses: actions/download-artifact@v3
+ 
