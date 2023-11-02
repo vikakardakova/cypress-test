@@ -6,7 +6,7 @@ on:
       - master
 
 env: 
-   RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+    RECORD_KEY: ${{env.CYPRESS_RECORD_KEY}} 
 
 jobs:
   testing:
