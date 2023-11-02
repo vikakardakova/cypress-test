@@ -24,7 +24,7 @@ jobs:
       - name: Run tests
         run: npm run cypress:app
       - name: Generate reports
-        run: npm run generate:report
+        run: npm run generate-report
       - name: Save reports
         uses: actions/upload-artifact@v3
         with:
