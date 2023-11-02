@@ -4,7 +4,7 @@ module.exports = defineConfig({
   projectId: "d15px9",
   reporter: "mochawesome",
   reporterOptions: {
-    reportDir: "cypress/results",
+    reportDir: "mochawesome-report",
     overwrite: false,
     html: false,
     json: true,
