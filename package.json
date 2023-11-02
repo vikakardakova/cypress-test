@@ -29,14 +29,13 @@
     "docs:serve": "compodoc -p src/tsconfig.app.json -d docs -s",
     "prepush": "npm run lint:ci",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
-    "cypress:withui": "npx cypress open", 
+    "cypress:withui": "npx cypress open",
     "cypress:headless": "npm run prereport && npx cypress run --browser chrome && npm run generate-report",
     "delete:reports": "rm -r cypress/results/* || true",
-    "prereport": "npm run delete:reports && npm run delete-merged", 
+    "prereport": "npm run delete:reports && npm run delete-merged",
     "generate-report": "npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json",
     "delete-merged": "rm mochawesome.json || true",
     "cypress:app": "start-test start http-get://localhost:4200/ cypress:headless"
-
   },
   "dependencies": {
     "@agm/core": "^1.1.0",
