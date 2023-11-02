@@ -25,10 +25,12 @@ jobs:
         run: npm run cypress:app
       - name: Save reports
         uses: actions/upload-artifact@v3
+        with:
+          path: mochawesome-report
+          name: Test Report
       - name: Get reports
         uses: actions/download-artifact@v3
         with:
-          path: mochawesome-report
           name: Test Report
 
   testing2:
