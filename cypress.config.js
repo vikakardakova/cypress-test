@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   retries: 1,
-  //projectId: "d15px9", for cypressCloud
+  projectId: "d15px9",
   reporter: "mochawesome",
   reporterOptions: {
     reportDir: "cypress/results",

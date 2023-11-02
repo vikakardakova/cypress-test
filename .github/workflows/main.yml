@@ -6,7 +6,7 @@ on:
       - master
 
 env: 
-    APP_VER: production
+   RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
 jobs:
   testing:
