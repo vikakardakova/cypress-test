@@ -44,6 +44,18 @@ jobs:
             run: npm install --force
           - name: Run tests
             run: npm run cypress:app
+          - name: Generate reports
+            run: npm run generate-report
+          - name: Save reports
+            uses: actions/upload-artifact@v3
+            with:
+               path: mochawesome-report
+               name: Test Report
+          - name: Get reports
+            uses: actions/download-artifact@v3
+            with:
+             name: Test Report
+
 
         
 
